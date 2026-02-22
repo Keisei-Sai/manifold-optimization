@@ -27,3 +27,11 @@ python -m experiments.compare_methods
 cat > requirements.txt << 'EOF'
 numpy
 matplotlib
+
+## Results
+
+### Convergence (loss vs iteration)
+![Convergence](figures/convergence.png)
+
+### Trajectory on the unit circle (Sphere GD)
+![Trajectory](figures/trajectory_sphere.png)
