@@ -1,4 +1,4 @@
-### Geometric Optimization on Manifolds (Python)
+# Geometric Optimization on Manifolds (Python)
 
 Implementation and empirical comparison of gradient-based optimization under geometric constraints using manifold-aware updates.
 
