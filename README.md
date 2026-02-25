@@ -1,75 +1,101 @@
-# Geometric Optimization on Manifolds (Python)
+### Geometric Optimization on Manifolds (Python)
 
-This repository implements and compares gradient-based optimization methods under geometric constraints.
-It was built from a self-directed seminar on optimization theory and manifold geometry.
+Implementation and empirical comparison of gradient-based optimization under geometric constraints using manifold-aware updates.
 
-## What this shows
-- **Constraint handling** via retraction (normalization) to stay on the unit sphere
-- **Empirical comparison**: Euclidean GD vs Sphere GD under the same objective
-- **Visualization**: convergence curve and on-manifold trajectory
+This project explores how geometric structure influences optimization behavior through numerical experiments inspired by optimization theory and differential geometry.
 
-Standard gradient descent operates in Euclidean space and may violate geometric constraints.
-Manifold-aware optimization updates in the ambient space and then retracts back to the manifold
-to respect intrinsic geometry.
+## Quick Start
 
-In this project, we compare:
-- **Euclidean Gradient Descent** in R^2
-- **Sphere (Manifold) Gradient Descent** on the unit sphere (retraction by normalization)
+Install dependencies:
 
-## Repository structure
-- `algorithms/`: optimization methods (Euclidean GD, Sphere GD)
-- `experiments/`: scripts to run comparisons
-- `figures/`: generated plots
+pip install -r requirements.txt
 
-## Run
-```bash
+Run experiment:
+
 python -m experiments.compare_methods
-cat > requirements.txt << 'EOF'
-numpy
-matplotlib
+
+This generates convergence plots and trajectory visualizations.
+
+## What This Project Demonstrates
+
+Manifold-aware optimization using normalization (retraction)
+
+Reproducible numerical experiments
+
+Comparison between Euclidean and manifold optimization
+
+Visualization of optimization trajectories
+
+Implemented methods:
+
+Euclidean Gradient Descent in R^2
+
+Sphere Gradient Descent on the unit sphere
 
 ## Results
 
-### Convergence (loss vs iteration)
-![Convergence](figures/convergence.png)
+Convergence plot:
+figures/convergence.png
 
-### Trajectory on the unit circle (Sphere GD)
-![Trajectory](figures/trajectory_sphere.png)
+Trajectory visualization:
+figures/trajectory_sphere.png
+
+## Repository Structure
+
+algorithms/ Optimization implementations
+experiments/ Experiment runners
+figures/ Generated plots
 
 ## Design Decisions
 
-### Why optimize on a sphere?
-Many optimization problems include constraints such as unit-norm conditions.
-Standard gradient descent does not preserve these constraints, which can lead to infeasible iterates.
-The sphere provides a simple and interpretable example of optimization on a constrained manifold.
+Why a sphere?
 
-### Why retraction (normalization)?
-Instead of solving constrained optimization directly, each gradient step is followed by normalization.
-This acts as a simple retraction that maps the iterate back onto the manifold while keeping the implementation lightweight.
+Many optimization problems include unit-norm constraints.
+Standard gradient descent may violate feasibility, while manifold optimization maintains constraints during updates.
 
-### Euclidean vs Manifold Optimization
-Euclidean gradient descent ignores geometric structure, while manifold gradient descent respects feasibility at every iteration.
-This project compares both approaches empirically to visualize how geometry affects optimization behavior.
+Why normalization?
 
-### What I learned
-Implementing the algorithm clarified how theoretical optimization concepts translate into practical algorithm design,
-especially the role of geometry in maintaining valid solutions.
+Each gradient step is followed by normalization:
 
-## Mathematical Formulation (Intuition)
+x_next = (x - alpha * grad_f(x)) / ||x - alpha * grad_f(x)||
 
-We consider optimization under a unit-norm constraint:
+This acts as a simple retraction mapping iterates back onto the manifold.
 
-minimize f(x) subject to ||x|| = 1
+## Mathematical Intuition
 
-A standard gradient descent step
+We consider:
 
-    x_{k+1} = x_k - α ∇f(x_k)
+minimize f(x)
+subject to ||x|| = 1
 
-may leave the feasible set.  
-To preserve feasibility, we apply a simple retraction:
+A standard gradient descent step may leave the feasible set.
+Normalization preserves feasibility while remaining computationally simple.
 
-    x_{k+1} = (x_k - α ∇f(x_k)) / ||x_k - α ∇f(x_k)||
+The goal is practical understanding of geometric optimization rather than formal proofs.
 
-This normalization step keeps iterates on the sphere while remaining computationally simple.
+## Skills Demonstrated
 
-The goal of this project is not theoretical rigor, but understanding how geometric constraints influence algorithm behavior in practice.
+Numerical optimization implementation
+
+Translating mathematical theory into software
+
+Experiment design and benchmarking
+
+Scientific visualization in Python
+
+Clean project organization
+
+## Future Work
+
+Riemannian gradient formulation
+
+Additional manifolds (Stiefel / Grassmann)
+
+Adaptive step sizes
+
+Higher-dimensional experiments
+
+## Requirements
+
+numpy
+matplotlib
