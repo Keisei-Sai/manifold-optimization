@@ -4,8 +4,14 @@ import matplotlib.pyplot as plt
 from algorithms.euclidean_gd import euclidean_gd
 from algorithms.sphere_gd import sphere_gradient_descent, f
 
+from pathlib import Path
+
 
 def main():
+    root = Path(__file__).resolve().parents[1]
+    figdir = root / "figures"
+    figdir.mkdir(exist_ok=True)
+    
     x0 = np.array([1.0, 0.2])
     x0_sphere = x0 / np.linalg.norm(x0)
     steps = 80
@@ -30,7 +36,8 @@ def main():
     plt.yscale("log")
 
     plt.tight_layout()
-    plt.savefig("figures/convergence.png", dpi=200)
+    plt.savefig(figdir / "convergence.png", dpi=200)
+    plt.close()
 
     # 2) trajectory on unit circle (Sphere) — zoom + annotations
     theta = np.linspace(0, 2 * np.pi, 400)
@@ -68,7 +75,8 @@ def main():
 
     plt.legend()
     plt.tight_layout()
-    plt.savefig("figures/trajectory_sphere.png", dpi=200)
+    plt.savefig(figdir / "trajectory_sphere.png", dpi=200)
+    plt.close()
 
 
 if __name__ == "__main__":
