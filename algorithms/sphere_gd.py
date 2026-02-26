@@ -7,6 +7,10 @@ def f(x: np.ndarray) -> float:
 
 
 def riemannian_grad(x: np.ndarray) -> np.ndarray:
+    """
+    Riemannian gradient on the unit sphere:
+      grad_R f(x) = grad f(x) - (x^T grad f(x)) x
+    """
     g = grad_f(x)
     return g - (x @ g) * x
 
