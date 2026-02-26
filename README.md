@@ -40,7 +40,7 @@ figures/convergence.png
 Trajectory visualization:
 ## Visualization
 
-![Optimization trajectory](images/trajectory.png)
+![Optimization trajectory](images/trajectory_rosenbrock.png)
 
 ## Repository Structure
 
