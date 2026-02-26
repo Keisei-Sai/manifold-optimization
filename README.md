@@ -4,17 +4,9 @@ Implementation and empirical comparison of gradient-based optimization under geo
 
 This project explores how geometric structure influences optimization behavior through numerical experiments inspired by optimization theory and differential geometry.
 
-## Quick Start
+## Visualization
 
-Install dependencies:
-
-pip install -r requirements.txt
-
-Run experiment:
-
-python -m experiments.compare_methods
-
-This generates convergence plots and trajectory visualizations.
+![Optimization trajectory](images/trajectory_rosenbrock.png)
 
 ## What This Project Demonstrates
 
@@ -32,21 +24,17 @@ Euclidean Gradient Descent in R^2
 
 Sphere Gradient Descent on the unit sphere
 
-## Results
+## Quick Start
 
-Convergence plot:
-figures/convergence.png
+Install dependencies:
 
-Trajectory visualization:
-## Visualization
+pip install -r requirements.txt
 
-![Optimization trajectory](images/trajectory_rosenbrock.png)
+Run experiment:
 
-## Repository Structure
+python -m experiments.compare_methods
 
-algorithms/ Optimization implementations
-experiments/ Experiment runners
-figures/ Generated plots
+This generates convergence plots and trajectory visualizations.
 
 ## Design Decisions
 
@@ -75,6 +63,12 @@ Normalization preserves feasibility while remaining computationally simple.
 
 The goal is practical understanding of geometric optimization rather than formal proofs.
 
+## Repository Structure
+
+algorithms/ Optimization implementations
+experiments/ Experiment runners
+figures/ Generated plots
+
 ## Skills Demonstrated
 
 Numerical optimization implementation
@@ -96,6 +90,13 @@ Additional manifolds (Stiefel / Grassmann)
 Adaptive step sizes
 
 Higher-dimensional experiments
+
+## Results
+
+Convergence plot:
+figures/convergence.png
+
+Trajectory visualization:
 
 ## Requirements
 
