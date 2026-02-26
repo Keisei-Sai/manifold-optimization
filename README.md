@@ -71,7 +71,7 @@ This section explains the geometric motivation behind the implementation.
 ![Convergence](figures/convergence.png)
 
 ### Trajectory visualization:
-![Trajectory](trajectory_sphere.png)
+![Trajectory](figures/trajectory_sphere.png)
 
 
 ## Repository Structure
