@@ -5,6 +5,10 @@ def f(x: np.ndarray) -> float:
     # Example objective (quadratic): f(x) = x0^2 + 2 x1^2
     return float(x[0] ** 2 + 2 * x[1] ** 2)
 
+def grad_f(x: np.ndarray) -> np.ndarray:
+    # Euclidean gradient of the example objective
+    return np.array([2 * x[0], 4 * x[1]], dtype=float)
+
 
 def riemannian_grad(x: np.ndarray) -> np.ndarray:
     """
@@ -24,8 +28,8 @@ def normalize(x: np.ndarray) -> np.ndarray:
 
 def sphere_gradient_descent(x0: np.ndarray, lr: float = 0.1, steps: int = 100) -> np.ndarray:
     """
-    Gradient descent with a simple retraction to the unit sphere:
-        x <- normalize(x - lr * grad_f(x))
+    Gradient descent on the unit sphere with retraction:
+        x <- normalize(x - lr * grad_R f(x))
     Returns: trajectory (steps+1, dim)
     """
     x = normalize(x0.astype(float))
