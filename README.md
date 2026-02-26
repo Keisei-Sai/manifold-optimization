@@ -22,7 +22,7 @@ Starting from classical optimization examples (Rosenbrock function), the project
 
 - Visualization of optimization trajectories
 
-### Implemented methods:
+### Implemented Methods
 
 - Euclidean Gradient Descent in R^2
 
@@ -33,9 +33,7 @@ Starting from classical optimization examples (Rosenbrock function), the project
 Install dependencies:
 
 pip install -r requirements.txt
-
 Run experiment:
-
 python -m experiments.compare_methods
 
 This generates convergence plots and trajectory visualizations.
@@ -57,9 +55,9 @@ This acts as a simple retraction mapping iterates back onto the manifold.
 
 ## Mathematical Intuition
 
-We consider:
+We consider the constrained optimization problem:
 
-minimize f(x)
+minimize f(x)  
 subject to ||x|| = 1
 
 A standard gradient descent step may leave the feasible set.
@@ -67,12 +65,19 @@ Normalization preserves feasibility while remaining computationally simple.
 
 This section explains the geometric motivation behind the implementation.
 
+## Results
+
+Convergence plot:
+figures/convergence.png
+
+Trajectory visualization:
+
 ## Repository Structure
 
-algorithms/ Optimization implementations
-experiments/ Experiment runners
-figures/ Generated plots
-images/ Visualization assets
+- algorithms/ Optimization implementations
+- experiments/ Experiment runners
+- figures/ Generated plots
+- images/ Visualization assets
 
 ## Skills Demonstrated
 
@@ -96,14 +101,7 @@ Adaptive step sizes
 
 Higher-dimensional experiments
 
-## Results
-
-Convergence plot:
-figures/convergence.png
-
-Trajectory visualization:
-
 ## Requirements
 
-numpy
-matplotlib
+- numpy
+- matplotlib
