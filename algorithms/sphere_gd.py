@@ -6,9 +6,9 @@ def f(x: np.ndarray) -> float:
     return float(x[0] ** 2 + 2 * x[1] ** 2)
 
 
-def grad_f(x: np.ndarray) -> np.ndarray:
-    # Gradient of the example objective
-    return np.array([2 * x[0], 4 * x[1]], dtype=float)
+def riemannian_grad(x: np.ndarray) -> np.ndarray:
+    g = grad_f(x)
+    return g - (x @ g) * x
 
 
 def normalize(x: np.ndarray) -> np.ndarray:
@@ -28,7 +28,7 @@ def sphere_gradient_descent(x0: np.ndarray, lr: float = 0.1, steps: int = 100) -
     history = [x.copy()]
 
     for _ in range(steps):
-        x = x - lr * grad_f(x)
+        x = x - lr * riemannian_grad(x)
         x = normalize(x)  # retraction to the sphere
         history.append(x.copy())
 
