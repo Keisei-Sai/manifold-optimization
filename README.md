@@ -32,9 +32,9 @@ Starting from classical optimization examples (Rosenbrock function), the project
 
 Install dependencies:
 
-pip install -r requirements.txt
+- pip install -r requirements.txt
 Run experiment:
-python -m experiments.compare_methods
+- python -m experiments.compare_methods
 
 This generates convergence plots and trajectory visualizations.
 
