@@ -67,10 +67,11 @@ This section explains the geometric motivation behind the implementation.
 
 ## Results
 
-Convergence plot:
-figures/convergence.png
+### Convergence plot:
+![Convergence](figures/convergence.png)
 
-Trajectory visualization:
+### Trajectory visualization:
+![Optimization trajectory](images/trajectory_rosenbrock.png)
 
 ## Repository Structure
 
