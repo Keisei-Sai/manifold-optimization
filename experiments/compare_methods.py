@@ -12,7 +12,7 @@ def main():
     figdir = root / "figures"
     figdir.mkdir(exist_ok=True)
     
-    x0 = np.array([1.0, 0.2])
+    x0 = np.array([0.05, 1.0])
     x0_sphere = x0 / np.linalg.norm(x0)
     steps = 80
     lr = 0.1
@@ -21,14 +21,14 @@ def main():
     traj_s = sphere_gradient_descent(x0_sphere, lr=lr, steps=steps)
 
     loss_e = [f(x) for x in traj_e]
-    loss_s = [f(x) for x in traj_s]
+    loss_s = [f(x) - 1.0 for x in traj_s] # gap to the sphere optimum (f* = 1)
 
     # 1) convergence plot (make it explanatory)
     plt.figure()
     plt.plot(loss_e, label="Euclidean GD (unconstrained)")
     plt.plot(loss_s, label="Sphere GD (constraint enforced)")
     plt.xlabel("Iteration")
-    plt.ylabel("Objective value f(x)")
+    plt.ylabel("f(x) (Euclidean) / f(x)-1 (Sphere gap)")
     plt.title("Effect of Geometric Constraint on Convergence")
     plt.legend()
 
