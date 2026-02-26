@@ -38,7 +38,9 @@ Convergence plot:
 figures/convergence.png
 
 Trajectory visualization:
-figures/trajectory_sphere.png
+## Visualization
+
+![Optimization trajectory](images/trajectory.png)
 
 ## Repository Structure
 
