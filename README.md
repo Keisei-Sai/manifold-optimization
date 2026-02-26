@@ -2,7 +2,11 @@
 
 Implementation and empirical comparison of gradient-based optimization under geometric constraints using manifold-aware updates.
 
-This project explores how geometric structure influences optimization behavior through numerical experiments inspired by optimization theory and differential geometry.
+## Overview
+
+This project investigates how geometric constraints influence optimization behavior by comparing optimization methods in both Euclidean space and manifold settings.
+
+Starting from classical optimization examples (Rosenbrock function), the project extends intuition toward optimization on constrained spaces such as the unit sphere.
 
 ## Visualization
 
@@ -10,19 +14,19 @@ This project explores how geometric structure influences optimization behavior t
 
 ## What This Project Demonstrates
 
-Manifold-aware optimization using normalization (retraction)
+- Manifold-aware optimization using normalization (retraction)
 
-Reproducible numerical experiments
+- Reproducible numerical experiments
 
-Comparison between Euclidean and manifold optimization
+- Comparison between Euclidean and manifold optimization
 
-Visualization of optimization trajectories
+- Visualization of optimization trajectories
 
-Implemented methods:
+### Implemented methods:
 
-Euclidean Gradient Descent in R^2
+- Euclidean Gradient Descent in R^2
 
-Sphere Gradient Descent on the unit sphere
+- Sphere Gradient Descent on the unit sphere
 
 ## Quick Start
 
@@ -61,13 +65,14 @@ subject to ||x|| = 1
 A standard gradient descent step may leave the feasible set.
 Normalization preserves feasibility while remaining computationally simple.
 
-The goal is practical understanding of geometric optimization rather than formal proofs.
+This section explains the geometric motivation behind the implementation.
 
 ## Repository Structure
 
 algorithms/ Optimization implementations
 experiments/ Experiment runners
 figures/ Generated plots
+images/ Visualization assets
 
 ## Skills Demonstrated
 
