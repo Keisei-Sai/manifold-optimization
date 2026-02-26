@@ -71,7 +71,8 @@ This section explains the geometric motivation behind the implementation.
 ![Convergence](figures/convergence.png)
 
 ### Trajectory visualization:
-![Optimization trajectory](images/trajectory_rosenbrock.png)
+![Trajectory](trajectory_sphere.png)
+
 
 ## Repository Structure
 
