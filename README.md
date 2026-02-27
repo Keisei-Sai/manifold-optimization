@@ -3,6 +3,12 @@
 
 Implementation and empirical comparison of gradient-based optimization under geometric constraints using manifold-aware updates.
 
+## Conceptual Idea
+
+![Concept Diagram](figures/concept_diagram.png)
+
+Geometric constraints modify optimization updates, producing different convergence behavior compared with unconstrained optimization.
+
 ## Project Goal
 
 This project compares optimization behavior with and without geometric constraints.
