@@ -2,6 +2,11 @@
 
 Implementation and empirical comparison of gradient-based optimization under geometric constraints using manifold-aware updates.
 
+## Project Goal
+
+This project demonstrates how geometric constraints change the behavior of optimization algorithms.
+By comparing unconstrained gradient descent with sphere-constrained optimization, the implementation visualizes how geometry affects convergence dynamics.
+
 ## Overview
 
 This project investigates how geometric constraints influence optimization behavior by comparing optimization methods in both Euclidean space and manifold settings.
@@ -67,6 +72,8 @@ This section explains the geometric motivation behind the implementation.
 
 ## Results
 
+The following figures compare convergence behavior and optimization trajectories under geometric constraints.
+
 ### Convergence plot:
 ![Convergence](figures/convergence.png)
 
@@ -107,3 +114,6 @@ Higher-dimensional experiments
 
 - numpy
 - matplotlib
+
+Author: Keisei Sai  
+GitHub: https://github.com/Keisei-Sai
