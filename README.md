@@ -1,4 +1,5 @@
 # Geometric Optimization on Manifolds (Python)
+> A small experimental project exploring how geometry changes optimization behavior.
 
 Implementation and empirical comparison of gradient-based optimization under geometric constraints using manifold-aware updates.
 
