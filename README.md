@@ -7,6 +7,20 @@ Implementation and empirical comparison of gradient-based optimization under geo
 This project demonstrates how geometric constraints change the behavior of optimization algorithms.
 By comparing unconstrained gradient descent with sphere-constrained optimization, the implementation visualizes how geometry affects convergence dynamics.
 
+## Key Result
+
+### Effect of geometric constraints on convergence
+
+![Convergence](figures/convergence.png)
+
+Geometric constraints change convergence behavior even when using the same optimization principle.
+
+### Optimization trajectory on the unit sphere
+
+![Trajectory](figures/trajectory_sphere.png)
+
+The optimization path remains on the constraint manifold through retraction-based updates.
+
 ## Overview
 
 This project investigates how geometric constraints influence optimization behavior by comparing optimization methods in both Euclidean space and manifold settings.
