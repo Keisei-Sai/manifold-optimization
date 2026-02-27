@@ -4,8 +4,9 @@ Implementation and empirical comparison of gradient-based optimization under geo
 
 ## Project Goal
 
-This project demonstrates how geometric constraints change the behavior of optimization algorithms.
+This project compares optimization behavior with and without geometric constraints.
 By comparing unconstrained gradient descent with sphere-constrained optimization, the implementation visualizes how geometry affects convergence dynamics.
+Many real-world optimization problems include constraints, and understanding their geometric effects is essential for designing reliable algorithms.
 
 ## Key Result
 
@@ -13,7 +14,7 @@ By comparing unconstrained gradient descent with sphere-constrained optimization
 
 ![Convergence](figures/convergence.png)
 
-Geometric constraints change convergence behavior even when using the same optimization principle.
+Even with the same optimization principle, enforcing geometric constraints fundamentally changes convergence behavior.
 
 ### Optimization trajectory on the unit sphere
 
@@ -26,6 +27,11 @@ The optimization path remains on the constraint manifold through retraction-base
 This project investigates how geometric constraints influence optimization behavior by comparing optimization methods in both Euclidean space and manifold settings.
 
 Starting from classical optimization examples (Rosenbrock function), the project extends intuition toward optimization on constrained spaces such as the unit sphere.
+
+## Why This Matters
+
+Optimization under constraints appears in many applications such as machine learning, signal processing, and scientific computing.
+This project provides an intuitive numerical perspective on how geometry influences algorithmic behavior.
 
 ## Visualization
 
